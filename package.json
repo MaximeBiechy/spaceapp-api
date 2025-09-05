@@ -1,0 +1,13 @@
+{
+  "name": "spaceapp-api",
+  "version": "1.0.0",
+  "description": "API for SpaceApp project",
+  "homepage": "https://github.com/MaximeBiechy/space_app-api/blob/main/README.md",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Maxime Biechy",
+  "license": "ISC"
+}
