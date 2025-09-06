@@ -3,17 +3,24 @@
   "version": "1.0.0",
   "description": "API for SpaceApp project",
   "homepage": "https://github.com/MaximeBiechy/spaceapp-api/blob/main/README.md",
-  "main": "index.js",
+  "type": "module",
+  "main": "server.js",
   "scripts": {
+    "dev": "npm run watch & nodemon dist/server.js",
+    "watch": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky"
   },
   "keywords": [],
-  "type": "module",
   "author": "Maxime Biechy",
   "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
   "devDependencies": {
+    "@types/express": "^5.0.3",
     "@types/node": "^24.3.1",
+    "nodemon": "^3.1.10",
     "eslint": "^9.35.0",
     "globals": "^16.3.0",
     "husky": "^9.1.7",
