@@ -11,5 +11,5 @@
     "moduleResolution": "nodenext",
     "resolveJsonModule": true
   },
-  "exclude": ["node_modules", "dist", "eslint.config.mts"]
+  "exclude": ["node_modules", "dist", "eslint.config.mts", "eslint.config.mjs"]
 }

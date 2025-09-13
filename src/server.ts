@@ -1,5 +1,19 @@
 import app from './app/app.js';
+import { config } from './config/config.js';
+import { initDatabase } from './config/database.js';
+import logger, { logError } from './shared/utils/logger.js';
 
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000');
-});
+const PORT = config.port;
+
+(async () => {
+  try {
+    initDatabase();
+
+    app.listen(PORT, () => {
+      logger.info(`[SERVER] running on http://localhost:${PORT}`);
+    });
+  } catch (error: any) {
+    logError('[SERVER] Failed to start server', error);
+    process.exit(1);
+  }
+})();
